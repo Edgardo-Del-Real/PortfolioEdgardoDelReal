@@ -1,12 +1,16 @@
 a{
    text-decoration: none;   
-   color: black;
-   transition: 0.5s;
+   color: white;
+   transition: .5s;
    font-family:serif;
 }
 a:hover{
- color: white;
+   font-size:large;
+   color: #be8eeb;
 }
-ul{
-   background-color: gray;
+.borde{
+   border: 2px blueviolet solid;
+}
+button{
+   color: white;
 }
