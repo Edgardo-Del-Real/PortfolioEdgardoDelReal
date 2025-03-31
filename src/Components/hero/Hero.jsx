@@ -1,5 +1,7 @@
 import React from 'react';
 import './Hero.css';
+import fotoMia from '../../assets/fotoMia.jpg'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const Hero = () => {
     return (
@@ -7,15 +9,18 @@ const Hero = () => {
             <div className="card container " style={{ maxWidth: '540px' }}>
                 <div className="row g-5">
                     <div className="col-md-4">
-                        <img src="ruta/a/tu/imagen.jpg" className="img-fluid rounded-start" alt="Descripción de la imagen" />
+                        <img src={fotoMia} className="img-fluid rounded-start" alt="Edgardo Del Real" />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title">EDGARDO DEL REAL</h5>
-                            <p className="card-text">Estudiante de Ingenieria en Sistemas FullStack Developer</p>
-                            <button><i>Likedin</i></button>
-                            <button><i>GitHub</i></button>
-                            <button><i>instagram</i></button>
+                            <h5 className="card-title d-flex justify-content-center">EDGARDO DEL REAL</h5>
+                            <p className="card-text d-flex justify-content-center">Estudiante de Ingenieria en Sistemas</p>
+                            <p className="card-text d-flex justify-content-center">FullStack Developer</p>
+                            <section className='d-flex justify-content-center'>
+                            <i className='bi bi-linkedin ps-3 fs-2'></i>
+                            <i className='bi bi-github ps-3 fs-2'></i>
+                            <i className='bi bi-instagram ps-3 fs-2'></i>
+                            </section> 
                         </div>
                     </div>
                 </div>
