@@ -1,0 +1,37 @@
+.borde{
+    border: 2px blueviolet solid;
+}
+i{
+    transition: .5s;
+}
+i:hover{
+    color:lightgoldenrodyellow
+}
+.linkedin:hover{
+    color:#0A66C2;
+}
+
+.git:hover{
+    color: #F0F6FC;
+}
+.ins,.linkedin,.git{
+    color: grey;
+    transition: 0.5s;
+}
+.ins:hover{
+    color: red;
+}
+.imagen{
+    width: 300px;
+    border-radius: 50%;
+    filter: grayscale(100%) blur(2px);
+    transition: 0.5s;
+}
+.imagen:hover{
+    filter: grayscale(0%) blur(0px)
+}
+.hero{
+    padding-top: 100px;
+}
+
+
