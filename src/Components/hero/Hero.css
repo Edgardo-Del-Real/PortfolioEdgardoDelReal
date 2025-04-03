@@ -34,4 +34,8 @@ i:hover{
     padding-top: 100px;
 }
 
-
+svg {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
