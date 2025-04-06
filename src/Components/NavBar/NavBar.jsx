@@ -10,6 +10,7 @@ const navBar = () =>{
                   <li className="pt-2 px-5 ms-2"><a href="#">HOME</a></li>
                   <li className="p-2 px-5 ms-2"><a href="#">ABOUT ME</a></li>
                   <li className="p-2 px-5 ms-2"><a href="#">SKILLS</a></li>
+                  <li className="p-2 px-5 ms-2"><a href="#">CONTACT</a></li>
                 </ul>
             </section>
         </nav>
@@ -18,4 +19,4 @@ const navBar = () =>{
     ) 
 }
 
-export default navBar
+export default navBar;

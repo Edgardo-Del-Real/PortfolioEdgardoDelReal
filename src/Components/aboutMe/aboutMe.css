@@ -1,0 +1,22 @@
+.aboutme{
+    margin-top: 200px;
+    height: 100vh;
+    gap: 60px;
+}
+.titulo{
+    color:blueviolet;
+    font-size:40px
+}
+.card1{
+    width: 40%;
+    height: 100%;
+    padding: 60px;
+}
+.parrafo{
+    text-align: center;
+}
+.borde-card{
+    border:4px rgba(144, 114, 173, 0.808) solid;
+    border-radius: 20%;
+}
+
