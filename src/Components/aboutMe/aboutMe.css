@@ -4,23 +4,15 @@
     margin-top: 200px;
     height: 100vh;
     gap: 60px;
-    background-color:#111315;
+    background-color: rgba(137, 43, 226, 0.26);
 }
-.titulo{
-    color:blueviolet;
-    font-size:40px
+.tit{
+    border-radius: 10px 30px;
+    background: #000000;
 }
-.card1{
+.img2{
     width: 40%;
-    height: 100%;
-    padding: 60px;
-        box-shadow: 10px 10px 5px rgba(135, 110, 225, 0.146);
+    height: 60%;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    
 }
-.parrafo{
-    text-align: center;
-}
-.borde-card{
-    border:4px rgba(144, 114, 173, 0.808) solid;
-    border-radius: 20%;
-}
-
