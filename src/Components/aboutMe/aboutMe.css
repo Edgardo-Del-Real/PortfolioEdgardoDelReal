@@ -1,7 +1,10 @@
+
+
 .aboutme{
     margin-top: 200px;
     height: 100vh;
     gap: 60px;
+    background-color:#111315;
 }
 .titulo{
     color:blueviolet;
@@ -11,6 +14,7 @@
     width: 40%;
     height: 100%;
     padding: 60px;
+        box-shadow: 10px 10px 5px rgba(135, 110, 225, 0.146);
 }
 .parrafo{
     text-align: center;

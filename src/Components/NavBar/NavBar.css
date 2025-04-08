@@ -2,7 +2,7 @@ a{
    text-decoration: none;   
    color: white;
    transition: .5s;
-   font-family:serif;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 a:hover{
    font-size:large;

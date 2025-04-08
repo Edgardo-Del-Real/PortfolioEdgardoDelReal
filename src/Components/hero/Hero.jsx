@@ -21,9 +21,9 @@ const Hero = () => {
             {/* Imagen */}
             <img src={fotoMia} alt="Edgardo Del Real" className="img-fluid imagen rounded-circle borde  border-3 shadow-lg" />
             <section className='d-flex ps-2 mt-3'>
-                <a href="https://www.instagram.com/edgardelreal1/" target='_blanc'><i className='bi bi-instagram ins fs-3 ps-4'></i></a>
-                <a href="https://www.linkedin.com/in/edgardo-del-real/" target='_blanc'><i className='bi bi-linkedin linkedin fs-3 ps-4'></i></a>
-                <a href="https://github.com/Edgardo-Del-Real" target='_blanc' ><i className='bi bi-github git fs-3 ps-4'></i></a>
+                <a href="https://www.instagram.com/edgardelreal1/" target='_blanc'><i className='bi bi-instagram ins ps-4'></i></a>
+                <a href="https://www.linkedin.com/in/edgardo-del-real/" target='_blanc'><i className='bi bi-linkedin linkedin ps-4'></i></a>
+                <a href="https://github.com/Edgardo-Del-Real" target='_blanc' ><i className='bi bi-github git ps-4'></i></a>
             </section>
         </section>
     );

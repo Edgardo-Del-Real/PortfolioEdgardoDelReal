@@ -6,6 +6,7 @@ const aboutMe = () => {
     return (
 
         <>     
+        
         <section className='aboutme  d-flex align-items-center justify-content-center p-5'>
             <section className=' borde-card card1  d-flex flex-column align-items-center justify-content-center'>
                 <h2 className='titulo'>About Me</h2>
