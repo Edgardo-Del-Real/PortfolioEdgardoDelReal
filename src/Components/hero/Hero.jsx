@@ -19,7 +19,9 @@ const Hero = () => {
             </svg>
 
             {/* Imagen */}
-            <img src={fotoMia} alt="Edgardo Del Real" className="img-fluid imagen rounded-circle borde  border-3 shadow-lg" />
+           
+            <img src={fotoMia} alt="Edgardo Del Real" className="img-fluid imagen  borde  border-3" />
+          
             <section className='d-flex ps-2 mt-3'>
                 <a href="https://www.instagram.com/edgardelreal1/" target='_blanc'><i className='bi bi-instagram ins ps-4'></i></a>
                 <a href="https://www.linkedin.com/in/edgardo-del-real/" target='_blanc'><i className='bi bi-linkedin linkedin ps-4'></i></a>

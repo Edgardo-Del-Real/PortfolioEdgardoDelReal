@@ -1,3 +1,11 @@
+@keyframes glow-border {
+    from {
+      box-shadow: 0 0 15px blueviolet;
+    }
+    to {
+      box-shadow: 0 0 25px blueviolet, 0 0 40px rgb(137, 24, 243);
+    }
+  }
 .borde{
     border: 2px blueviolet solid;
 }
@@ -35,6 +43,8 @@ i:hover{
 .imagen{
     width: 300px;
     border-radius: 50%;
+    overflow: hidden;
+    animation: glow-border 2s infinite alternate
 }
 .hero{
     padding-top: 100px;
@@ -45,3 +55,4 @@ svg {
     left: 50%;
     transform: translateX(-50%);
 }
+
