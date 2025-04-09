@@ -1,12 +1,31 @@
-a{
-   text-decoration: none;   
+nav a {
+   position: relative;
+   text-decoration: none;
+   transition: color 0.5s;
    color: white;
    transition: .5s;
    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
+   nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 0%;
+      height: 2px;
+      background-color: blueviolet;
+      transition: width 0.5s ease;
+   }
+
+nav a:hover::after {
+   width: 100%;
+   transform: translateX(-50%) scaleX(1);
+}
+
 a:hover{
-   font-size:large;
-   color: #be8eeb;
+   color: #c390f3;
 }
 .borde{
    border: 2px blueviolet solid;

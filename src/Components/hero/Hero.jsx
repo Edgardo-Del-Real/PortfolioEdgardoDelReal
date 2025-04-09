@@ -20,9 +20,9 @@ const Hero = () => {
 
             {/* Imagen */}
            
-            <img src={fotoMia} alt="Edgardo Del Real" className="img-fluid imagen  borde  border-3" />
+            <img src={fotoMia} alt="Edgardo Del Real" className="img-fluid imagen  border-3" />
           
-            <section className='d-flex ps-2 mt-3'>
+            <section className='d-flex  mt-4 '>
                 <a href="https://www.instagram.com/edgardelreal1/" target='_blanc'><i className='bi bi-instagram ins ps-4'></i></a>
                 <a href="https://www.linkedin.com/in/edgardo-del-real/" target='_blanc'><i className='bi bi-linkedin linkedin ps-4'></i></a>
                 <a href="https://github.com/Edgardo-Del-Real" target='_blanc' ><i className='bi bi-github git ps-4'></i></a>
