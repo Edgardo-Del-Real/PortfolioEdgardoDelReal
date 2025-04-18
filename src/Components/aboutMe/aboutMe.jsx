@@ -14,11 +14,13 @@ const aboutMe = () => {
             <section className=' d-flex flex-wrap align-items-center justify-content-around texto'>
                 <div className=''>
                     <h2 className='fs-1 titulos mb-4'>About Me</h2>
-                    <p className='fs-5 parrafos'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, animi? Praesentium iusto placeat error odit obcaecati tempore totam, suscipit illo earum unde itaque cumque hic, corporis quas quidem ea fuga.</p>
+                    <p className='fs-5 parrafos'>Soy Fullstack Developer, con interés en seguir creciendo en el mundo IT. Me gusta explorar nuevas tecnologías y mejorar constantemente mis habilidades. Tengo nivel de inglés B1, con buena capacidad para comunicarme y aprender en ese idioma.
+
+</p>
                 </div>
                 <div className=''>
                     <h2 className='fs-1 titulos mb-4'>Why me</h2>
-                    <p className='fs-5 parrafos'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto consequuntur modi iste. Laboriosam vel nesciunt corrupti earum amet dolores veniam voluptate similique placeat iste, labore quae quisquam quas ducimus animi!</p>
+                    <p className='fs-5 parrafos'>Me involucro con compromiso y curiosidad. Soy proactivo, autodidacta y veo los desafíos como oportunidades. Me adapto rápido, trabajo bien en equipo y me comunico con claridad. La constancia y la resiliencia me acompañan día a día.</p>
                 </div>
             </section>
         </section>

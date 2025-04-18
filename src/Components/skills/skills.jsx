@@ -1,19 +1,19 @@
 import React from 'react'
 import './skills.css'
+import css3 from '../../assets/css3.svg'
+
 
 const navBar = () =>{
     return(
       <>
-        <section>
-            <h2>SKILLS</h2>
+        <section className='section-skills d-flex justify-content-center pt-4' >
+            <h2 className='titulo-skills fs-2'>SKILLS</h2>
             <section>
-                <ul className='list-unstyled'>
-                    <li><i></i></li>
-                    <li><i></i></li>
-                    <li><i></i></li>
-                    <li><i></i></li>
-                    <li><i></i></li>
-                </ul>
+                <h2>Front-end</h2>
+                <div>
+                  <img src={css3} alt="" />
+                </div>
+                
             </section>
         </section>
       </>
