@@ -1,6 +1,18 @@
 .section-skills{
     height: 100vh;
+    border: solid;
 }
+
 .titulo-skills{
     color: blueviolet;
+}
+.img-skills{
+    width: 20%;
+    height: 20%;
+}
+.front{
+    color: grey;
+}
+.carta{
+    width: 40%;
 }
