@@ -1,18 +1,36 @@
 .section-skills{
     height: 100vh;
-    border: solid;
 }
 
 .titulo-skills{
     color: blueviolet;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
 }
 .img-skills{
     width: 20%;
     height: 20%;
+    transition: 0.5s;
 }
 .front{
-    color: grey;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
 }
 .carta{
     width: 40%;
+}
+.cont-img{
+    gap: 10px;
+}
+.borde-cont-img{
+    background: rgba(114, 114, 114, 0.171);
+    border: 1px solid;
+    border-radius: 40px;
+    box-shadow: 5px 5px 2px blueviolet;
+}
+
+.img-skills:hover{
+    cursor: pointer;
+   transform:translateY(5px)
+   translateX(2px);
 }
