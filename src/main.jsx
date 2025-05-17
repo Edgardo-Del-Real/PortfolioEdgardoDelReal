@@ -7,6 +7,7 @@ import NavBar from './Components/NavBar/NavBar'
 import Hero from './Components/hero/Hero'
 import AboutMe from './Components/aboutMe/aboutMe'
 import Skills from './Components/skills/skills'
+import Form from './Components/form/form'
 
 
 
@@ -16,5 +17,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Hero />
     <AboutMe /> 
     <Skills />
+    <Form />
   </React.StrictMode>,
 )

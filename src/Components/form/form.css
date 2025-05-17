@@ -1,0 +1,14 @@
+.content-input{
+    gap: 1.2rem;
+    width: 50%;
+}
+form{
+    height: 100vh;
+}
+input{
+    width: 60%;
+    height: 50px
+}
+.icons{
+    width: 20%;
+}
