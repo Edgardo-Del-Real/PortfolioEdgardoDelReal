@@ -1,14 +1,35 @@
-.content-input{
-    gap: 1.2rem;
-    width: 50%;
-}
 form{
     height: 100vh;
 }
+    .content-input{
+    gap: 1.2rem;
+    width: 50%;
+}
 input{
-    width: 60%;
-    height: 50px
+    all:unset;
+    width: 80%;
+    height: 50px;
+    border: 3px blueviolet solid;
+    border-radius: 10px 30px;
+    background: #111315;
 }
 .icons{
     width: 20%;
+}
+textarea{
+    all:unset;
+    border: 3px blueviolet solid;
+    border-radius: 10px 30px;
+    width: 80%;
+    height: 250px;
+    max-width: 80%;
+    max-height: 250px;
+    min-height: 250px;
+    min-width: 80%;
+}
+.boton{
+    background:blueviolet;
+    color: white;
+    width: 20%;
+    height: 40px;   
 }
