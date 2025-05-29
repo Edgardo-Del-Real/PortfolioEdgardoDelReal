@@ -3,9 +3,10 @@
 }
 
 .titulo-skills{
-    color: blueviolet;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
+  color:blueviolet;
+  font-family:'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .img-skills{
     width: 20%;
