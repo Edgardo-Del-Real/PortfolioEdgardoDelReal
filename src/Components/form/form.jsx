@@ -36,10 +36,26 @@ const Form = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className='d-flex justify-content-center align-items-center flex-wrap p-4'>
-            <h2 className='titulo-skills fs-1 mb-4'>KEEP IN TOUCH</h2>
-            <section className='d-flex container justify-content-evenly align-items-center p-3'>
-                <section className='d-flex flex-column content-input justify-content-center align-items-center'>
+        <form onSubmit={handleSubmit} className='d-flex 
+        justify-content-center 
+        align-items-center 
+        flex-wrap p-4'>
+            
+            <h2 className='titulo-skills 
+            fs-1
+            mb-4'>
+            KEEP IN TOUCH</h2>
+
+            <section className='d-flex 
+            container 
+            justify-content-evenly 
+            align-items-center 
+            p-3'>
+                <section className='d-flex 
+                flex-column 
+                content-input 
+                justify-content-center 
+                align-items-center'>
                     <input 
                         type="text"  
                         value={name} 

@@ -5,7 +5,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Hero = () => {
     return (
-        <section className=" d-flex flex-column hero align-items-center position-relative">
+        <section className=" d-flex 
+        flex-column 
+        hero align-items-center 
+        position-relative">
             {/* SVG para texto curvado */}
             <svg width="300" height="100" className="position-absolute">
                 <defs>
