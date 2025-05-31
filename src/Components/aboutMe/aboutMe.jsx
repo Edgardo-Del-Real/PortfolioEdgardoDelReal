@@ -2,17 +2,20 @@ import React from 'react';
 import './aboutMe.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import foto2 from '../../assets/foto2.jpg';
+import { Element } from 'react-scroll';
 
-const aboutMe = () => {
+const aboutMe = () => { 
+
     return (
 
-        <>     
+        <Element name='about-me'>    
         <section className='textos 
         p-5 
         aboutme 
         d-flex 
         align-items-center 
-        justify-content-around'>  
+        justify-content-around'
+        id='about-me'>  
             <section className=' d-flex 
             align-items-center 
             justify-content-around'>
@@ -48,8 +51,7 @@ const aboutMe = () => {
                 </div>
             </section>
         </section>
-        </>
+        </Element>
     );
 }
-
 export default aboutMe;

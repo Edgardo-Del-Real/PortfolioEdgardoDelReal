@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavBar.css'
-
+import {Link} from 'react-scroll';
 const navBar = () =>{
     return(
       <>
@@ -16,8 +16,11 @@ const navBar = () =>{
                 p-2 
                 bg-dark 
                 bg-opacity-50">
-                  <li className="pt-2 px-5 ms-2"><a href="#">HOME</a></li>
-                  <li className="p-2 px-5 ms-2"><a href="#">ABOUT ME</a></li>
+                 
+                <li className="pt-2 px-5 ms-2"><a href="#">HOME</a></li>
+                <li className="p-2 px-5 ms-2">
+                  <Link to="about-me" spy={true} smooth={true} duration={500}>
+                  ABOUT ME </Link> </li>
                   <li className="p-2 px-5 ms-2"><a href="#">SKILLS</a></li>
                   <li className="p-2 px-5 ms-2"><a href="#">CONTACT</a></li>
                 </ul>
