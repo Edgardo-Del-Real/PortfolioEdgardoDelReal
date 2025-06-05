@@ -20,6 +20,7 @@ input{
 
 input:hover{
     border: 3px blueviolet solid;
+    box-shadow: 0px 5px 5px blueviolet ;
 }
 
 .icons{
@@ -45,6 +46,7 @@ textarea{
 
 textarea:hover{
     border: 3px blueviolet solid;
+    box-shadow: 0px 5px 5px blueviolet ;
 }
 
 input:hover,
@@ -57,7 +59,7 @@ textarea:not(:placeholder-shown) {
 }
 
 .boton{
-    border: 3px #C4C3D0 solid;
+    border: 4px #C4C3D0 solid;
     font-weight: bold;
     border-radius: 10px;
     background:blueviolet;
@@ -68,7 +70,7 @@ textarea:not(:placeholder-shown) {
 }
 
 .boton:hover{
-    border: 3px rgba(137, 43, 226, 0.631) solid;
-    background: rgba(137, 43, 226, 0.614);
-    color: white;
+    border: 4px rgba(137, 43, 226, 0.631) solid;
+    background: rgb(253, 235, 235);
+    color: blueviolet;
 }

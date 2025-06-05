@@ -44,14 +44,15 @@ const Form = () => {
             <h2 className='titulo-skills 
             fs-1
             mb-4'>
-            KEEP IN TOUCH</h2>
+            KEEP IN TOUCH
+            </h2>
 
-            <section className='d-flex 
+            <section className=' row d-flex 
             container 
             justify-content-evenly 
             align-items-center 
             p-3'>
-                <section className='d-flex 
+                <section className=' col-12 sm-6 d-flex 
                 flex-column 
                 content-input 
                 justify-content-center 
@@ -78,7 +79,7 @@ const Form = () => {
                     />
                     <button 
                         type='submit' 
-                        className='boton fs-6'>
+                        className='boton fs-6 '>
                         SUBMIT
                     </button>
                 </section>

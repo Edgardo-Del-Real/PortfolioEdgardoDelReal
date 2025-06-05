@@ -1,13 +1,14 @@
-nav a {
+.links {
    position: relative;
    text-decoration: none;
    transition: color 0.5s;
    color: white;
    transition: .5s;
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   cursor: pointer;
 }
 
-   nav a::after {
+   .links::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -19,12 +20,12 @@ nav a {
       transition: width 0.5s ease;
    }
 
-nav a:hover::after {
+.links:hover::after {
    width: 100%;
    transform: translateX(-50%) scaleX(1);
 }
 
-a:hover{
+.links:hover{
    color: #c390f3;
 }
 .borde{

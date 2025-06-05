@@ -20,7 +20,8 @@ const navBar = () =>{
       d-flex 
       align-items-center 
       justify-content-center 
-      flex-wrap '>
+      flex-wrap 
+      mt-5'>
 
         <h2 className='titulo-skills fs-1'>SKILLS</h2>
         <section className='  d-flex 
