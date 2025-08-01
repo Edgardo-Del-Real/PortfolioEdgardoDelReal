@@ -15,7 +15,8 @@ const navBar = () =>{
                 rounded-5 
                 p-2 
                 bg-dark 
-                bg-opacity-50">
+                bg-opacity-50
+                bg-black">
                  
                 <li 
                   className="pt-2 
@@ -68,7 +69,6 @@ const navBar = () =>{
                           className='links'>
                         PROJECTS</Link>
                   </li>
-
               </ul>
             </section>
         </nav>

@@ -4,11 +4,11 @@
    transition: color 0.5s;
    color: white;
    transition: .5s;
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    cursor: pointer;
 }
 
-   .links::after {
+   .links::after { 
       content: '';
       position: absolute;
       bottom: 0;
@@ -24,13 +24,6 @@
    width: 100%;
    transform: translateX(-50%) scaleX(1);
 }
-
-.links:hover{
-   color: #c390f3;
-}
 .borde{
    border: 2px blueviolet solid;
-}
-button{
-   color: white;
 }

@@ -5,32 +5,56 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Hero = () => {
     return (
-        <section className=" d-flex 
-        flex-column 
-        hero align-items-center 
-        position-relative">
-            {/* SVG para texto curvado */}
-            <svg width="300" height="100" className="position-absolute">
-                <defs>
-                    <path id="curvaTexto" d="M 50,100 A 100,50 0 1,1 250,100" fill="transparent" />
-                </defs>
-                <text fill="white" fontSize="24" fontWeight="bold">
-                    <textPath href="#curvaTexto" startOffset="50%" textAnchor="middle">
-                        Edgardo Del Real
-                    </textPath>
-                </text>
-            </svg>
+    <section className="container hero position-relative py-5">
+  <div className="row align-items-center">
+    
+    {/* Columna izquierda: Texto, redes, botones */}
+    <div className="col-md-6 d-flex flex-column align-items-start">
+      {/* Título recto */}
+      <h1 className="display-4 fw-bold text-primary mb-3">
+        Edgardo Del Real
+      </h1>
 
-            {/* Imagen */}
-           
-            <img src={fotoMia} alt="Edgardo Del Real" className="img-fluid imagen  border-3" />
-          
-            <section className='d-flex  mt-4 '>
-                <a href="https://www.instagram.com/edgardelreal1/" target='_blanc'><i className='bi bi-instagram ins ps-4'></i></a>
-                <a href="https://www.linkedin.com/in/edgardo-del-real/" target='_blanc'><i className='bi bi-linkedin linkedin ps-4'></i></a>
-                <a href="https://github.com/Edgardo-Del-Real" target='_blanc' ><i className='bi bi-github git ps-4'></i></a>
-            </section>
-        </section>
+      {/* Subtítulo */}
+      <h2 className="h4 text-secondary mb-4">Desarrollador Web Fullstack</h2>
+
+      {/* Redes sociales */}
+      <section className="d-flex mb-4">
+        <a href="https://www.instagram.com/edgardelreal1/" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-instagram ins ps-3 fs-3 "></i>
+        </a>
+        <a href="https://www.linkedin.com/in/edgardo-del-real/" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-linkedin linkedin ps-3 fs-3 "></i>
+        </a>
+        <a href="https://github.com/Edgardo-Del-Real" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-github git ps-3 fs-3"></i>
+        </a>
+      </section>
+
+      {/* Botones */}
+      <div className="d-flex gap-3">
+        <a href="#" className="btn-cv" download>
+          Descargar CV
+        </a>
+        <a href="#contacto" className="btn-contact">
+          Contacto
+        </a>
+      </div>
+    </div>
+
+    {/* Columna derecha: Imagen */}
+    <div className="col-md-6 text-center mt-4 mt-md-0">
+      <img
+        src={fotoMia}
+        alt="Edgardo Del Real"
+        className="img-fluid img2"
+        style={{ maxWidth: '300px' }}
+      />
+    </div>
+  </div>
+</section>
+
+
     );
 }
 
