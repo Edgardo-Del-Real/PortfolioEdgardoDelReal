@@ -1,37 +1,62 @@
-.section-skills{
+.section-skills {
     height: 100vh;      
+    padding: 50px 0;
 }
 
-.titulo-skills{
-  color:blueviolet;
-  font-family:'Courier New', Courier, monospace;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.titulo-skills {
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-.img-skills{
-    width: 20%;
-    height: 20%;
-    transition: 0.5s;
-}
-.front{
+
+.front {
     color: white;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
-.carta{
-    width: 40%;
-}
-.cont-img{
+
+ .carta {
+    width: 100%;
+    max-width: 500px;
+} 
+
+.cont-img {
     gap: 10px;
 }
-.borde-cont-img{
-    background: rgba(114, 114, 114, 0.171);
-    border: 1px solid;
-    border-radius: 40px;
-    box-shadow: 5px 5px 2px blueviolet;
+
+.img-skills {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
 }
 
-.img-skills:hover{
+.img-skills:hover {
     cursor: pointer;
-   transform:translateY(5px)
-   translateX(2px);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.skill-card {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #1f1f2e;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    animation: glow-border 1s infinite alternate;;
+}
+
+.skill-card p {
+    margin: 5px 0 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: whitesmoke;
 }
