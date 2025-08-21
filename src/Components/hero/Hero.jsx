@@ -5,7 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Hero = () => {
     return (
-    <section className="container hero position-relative py-5">
+    <section className="container position-relative hero">
   <div className="row align-items-center">
     
     {/* Columna izquierda: Texto, redes, botones */}

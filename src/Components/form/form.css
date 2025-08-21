@@ -58,19 +58,4 @@ textarea:not(:placeholder-shown) {
   border-color: blueviolet;
 }
 
-.boton{
-    border: 4px #C4C3D0 solid;
-    font-weight: bold;
-    border-radius: 10px;
-    background:blueviolet;
-    color: #C4C3D0;
-    width: 20%;
-    height: 40px;   
-    transition: 0.5s;
-}
 
-.boton:hover{
-    border: 4px rgba(137, 43, 226, 0.631) solid;
-    background: rgb(253, 235, 235);
-    color: blueviolet;
-}

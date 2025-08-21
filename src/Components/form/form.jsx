@@ -2,6 +2,7 @@ import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
 import './form.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Footer from '../footer/footer';
 
 const Form = () => {
     const [name, setName] = useState('');
@@ -36,55 +37,51 @@ const Form = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className='d-flex 
-        justify-content-center 
-        align-items-center 
-        flex-wrap p-4'>
-            
-            <h2 className='titulo-skills 
-            fs-1
-            mb-4'>
-            KEEP IN TOUCH
-            </h2>
+       <form onSubmit={handleSubmit} 
+  className='d-flex flex-column justify-content-center align-items-center p-4'>
 
-            <section className=' row d-flex 
-            container 
-            justify-content-evenly 
-            align-items-center 
-            p-3'>
-                <section className=' col-12 sm-6 d-flex 
-                flex-column 
-                content-input 
-                justify-content-center 
-                align-items-center'>
-                    <input 
-                        type="text"  
-                        value={name} 
-                        placeholder='YOUR FULL NAME' 
-                        onChange={(e) => setName(e.target.value)} 
-                        required
-                    />
-                    <input 
-                        type="email"  
-                        placeholder='YOUR EMAIL' 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <textarea   
-                        placeholder='YOUR MESSAGE' 
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)} 
-                        required
-                    />
-                    <button 
-                        type='submit' 
-                        className='boton fs-6 '>
-                        SUBMIT
-                    </button>
-                </section>
-            </section>
-        </form>
+  <h2 className='titulo-skills fs-1 mb-4'>
+    KEEP IN TOUCH
+  </h2>
+
+  <section 
+    className='container d-flex justify-content-center align-items-stretch p-3'>
+      
+      {/* Columna izquierda: formulario */}
+      <section className='col-12 col-md-6 d-flex flex-column content-input justify-content-center align-items-center'>
+        <input 
+          type="text"  
+          value={name} 
+          placeholder='YOUR FULL NAME' 
+          onChange={(e) => setName(e.target.value)} 
+          required
+        />
+        <input 
+          type="email"  
+          placeholder='YOUR EMAIL' 
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <textarea   
+          placeholder='YOUR MESSAGE' 
+          value={message}
+          onChange={(e) => setMessage(e.target.value)} 
+          required
+        />
+        <button 
+          type='submit' 
+          className='btn-cv fs-6'>
+          SUBMIT
+        </button>
+      </section>
+
+      {/* Columna derecha: contacto */}
+      <section className="col-12 col-md-5 d-flex align-items-stretch justify-content-center align-items-center">
+        <Footer />
+      </section>
+  </section>
+</form>
     );
 };
 

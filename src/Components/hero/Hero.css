@@ -47,7 +47,9 @@ i:hover{
     animation: glow-border 2s infinite alternate
 }
 .hero{
-    padding-top: 100px;
+    height: 100vh;
+    padding-top: 150px;
+    padding-left: 130px;
 }
 
 svg {
