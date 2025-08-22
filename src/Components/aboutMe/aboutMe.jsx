@@ -18,9 +18,8 @@ const AboutMe = () => {
     return (
         <Element name='about-me' className='aboutme'>
             <section className='textos p-5 d-flex flex-column align-items-center' id='about-me'>
-                    <div className="titulo-con-icono">
-                        <i className="bi bi-person-circle"></i>
-                        <h2>ABOUT ME</h2>
+                    <div className="titulo-con-icono">  
+                        <h6 className=' text-secondary'>ABOUT ME</h6>
                     </div>
 
                 <div className='d-flex flex-wrap flex-lg-nowrap justify-content-center align-items-start gap-5'>
