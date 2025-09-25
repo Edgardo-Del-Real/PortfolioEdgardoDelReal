@@ -30,12 +30,12 @@ const skillsData = {
 const Skills = () => {
   return (
     <section className='section-skills d-flex flex-column align-items-center mt-5'>
-      <h2 className='titulo-skills fs-1 mb-4'>SKILLS</h2>
+      <h6 className='text-secondary fw-bold mb-4 titulo-con-icono'>SKILLS</h6>
       <div className='d-flex flex-wrap justify-content-center gap-4'>
 
         {/* Frontend */}
         <div className='carta p-3 borde-cont-img d-flex flex-column align-items-center'>
-          <h2 className='fs-3 front mb-4'>Front-end</h2>
+          <h2 className='text-primary fw-bold mb-4'>Front-end</h2>
           <div className='d-flex flex-wrap justify-content-center gap-3'>
             {skillsData.frontend.map((skill, index) => (
               <div key={index} className='skill-card text-center'>
@@ -48,7 +48,7 @@ const Skills = () => {
 
         {/* Backend */}
         <div className='carta p-3 borde-cont-img d-flex flex-column align-items-center'>
-          <h2 className='fs-3 front mb-4'>Back-end</h2>
+          <h2 className='text-primary fw-bold mb-4'>Back-end</h2>
           <div className='d-flex flex-wrap justify-content-center gap-3'>
             {skillsData.backend.map((skill, index) => (
               <div key={index} className='skill-card text-center'>

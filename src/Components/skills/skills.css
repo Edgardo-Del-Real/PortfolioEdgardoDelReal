@@ -1,21 +1,8 @@
 .section-skills {
     height: 100vh;      
     padding: 50px 0;
-}
-
-.titulo-skills {
-    color: blueviolet;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.front {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-}
-
- .carta {
+} 
+.carta {
     width: 100%;
     max-width: 500px;
 } 

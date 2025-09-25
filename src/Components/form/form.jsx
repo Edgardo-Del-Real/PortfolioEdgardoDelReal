@@ -40,9 +40,9 @@ const Form = () => {
        <form onSubmit={handleSubmit} 
   className='d-flex flex-column justify-content-center align-items-center p-4'>
 
-  <h2 className='titulo-skills fs-1 mb-4'>
-    KEEP IN TOUCH
-  </h2>
+  <h6 className='titulo-con-icono text-secondary fw-bold mb-4'>
+    LET'S KEEP IN TOUCH
+  </h6>
 
   <section 
     className='container d-flex justify-content-center align-items-stretch p-3'>
