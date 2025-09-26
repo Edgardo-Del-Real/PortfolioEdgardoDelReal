@@ -2,8 +2,8 @@ import React from 'react';
 
 const Contacto = () => {
   const contactCards = [
-    { icon: 'bi bi-person-circle', title: 'Nombre', text: 'Edgardo Del Real' },
-    { icon: 'bi bi-telephone', title: 'Teléfono', text: '+54 9 3447-491803' },
+    { icon: 'bi bi-person-circle', title: 'Name', text: 'Edgardo Del Real' },
+    { icon: 'bi bi-telephone', title: 'Phone', text: '+54 9 3447-491803' },
     { icon: 'bi bi-envelope', title: 'Email', text: 'edgardodelreal@email.com' },
   ];
 

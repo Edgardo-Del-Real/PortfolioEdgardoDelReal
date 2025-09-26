@@ -5,8 +5,8 @@
    color: white;
    transition: .5s;
    font-family:Arial, Helvetica, sans-serif;
-   font-weight: 500;
    cursor: pointer;
+   letter-spacing: 3px;
 }
 
    .links::after { 
@@ -17,7 +17,8 @@
       transform: translateX(-50%) scaleX(0);
       width: 0%;
       height: 2px;
-      background-color: blueviolet;
+      /* background-color: blue; */
+      background:  linear-gradient(90deg, rgb(173, 90, 250) 0%, rgb(57, 0, 97) 100%);
       transition: width 0.5s ease;
    }
 
@@ -26,5 +27,5 @@
    transform: translateX(-50%) scaleX(1);
 }
 .borde{
-   border: 2px blueviolet solid;
+    border: 2px blueviolet solid; 
 }
