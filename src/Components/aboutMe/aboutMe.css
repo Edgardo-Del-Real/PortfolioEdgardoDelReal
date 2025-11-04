@@ -56,4 +56,21 @@
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .aboutme {
+    height: auto;
+    margin-top: -100px;
+  }
 
+  .img2_ {
+    display: none;
+  }
+
+  .textos {
+    gap: 30px;
+  }
+
+  .tarjetas-container {
+    max-width: 100%;
+  }
+}

@@ -25,7 +25,7 @@ const AboutMe = () => {
                 <div className='d-flex flex-wrap flex-lg-nowrap justify-content-center align-items-start gap-5'>
                     {/* Imagen a la izquierda */}
                     <div>
-                        <img src={foto2} alt="Foto" className='img2' />
+                        <img src={foto2} alt="Foto" className='img2_ img2' />
                     </div>
 
                     {/* Tarjetas a la derecha */}

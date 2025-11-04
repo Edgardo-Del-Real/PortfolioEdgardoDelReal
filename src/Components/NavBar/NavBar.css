@@ -6,7 +6,8 @@
    transition: .5s;
    font-family:Arial, Helvetica, sans-serif;
    cursor: pointer;
-   letter-spacing: 3px;
+   letter-spacing: 0.3em;
+   font-size: 1.1em;
 }
 
    .links::after { 
@@ -29,3 +30,37 @@
 .borde{
     border: 2px blueviolet solid; 
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+ @media (max-width: 991px){  
+   .links {
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+  }
+}
+@media (max-width: 480px) {
+.responsive-nav {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.9);
+} 
+}
+

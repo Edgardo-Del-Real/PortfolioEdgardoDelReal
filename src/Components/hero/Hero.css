@@ -85,3 +85,14 @@ svg {
     color: blueviolet;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 768px) {
+    .hero{
+        padding-left: 20px;
+        padding-top: 80px;
+        text-align: center;
+    }
+    .imagen{
+        width: 200px;
+    }
+}

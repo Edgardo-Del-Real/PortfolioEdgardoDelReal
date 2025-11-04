@@ -5,6 +5,7 @@ const navBar = () =>{
     return(
       <>
         <nav className=" container navbar p-2 mt-4 " >
+          
           <section className="d-flex 
             flex-grow-1 
             justify-content-center ">
@@ -16,7 +17,8 @@ const navBar = () =>{
                 p-2 
                 bg-dark 
                 bg-opacity-50
-                bg-black">
+                bg-black
+                responsive-nav">
                  
                 <li 
                   className="pt-2 

@@ -47,3 +47,11 @@
     font-weight: bold;
     color: whitesmoke;
 }
+
+@media (max-width: 768px) {
+    .section-skills {
+        height: auto;
+        padding: 30px 0;
+    }
+    
+}
