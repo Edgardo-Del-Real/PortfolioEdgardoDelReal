@@ -96,3 +96,16 @@ svg {
         width: 200px;
     }
 }
+@media (max-width: 480px) {
+    .hero{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 20px;
+        margin-top: 50px;
+    }
+    .img2{
+        display: none;
+    }
+
+}

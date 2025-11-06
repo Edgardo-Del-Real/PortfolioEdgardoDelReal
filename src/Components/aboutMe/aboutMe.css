@@ -74,3 +74,13 @@
     max-width: 100%;
   }
 }
+@media (max-width: 480px) {
+  .aboutme {
+    margin-top: -400px;
+  }
+
+  .custom-card {
+    width: 120px;
+    padding: 0.5rem;
+  }
+}

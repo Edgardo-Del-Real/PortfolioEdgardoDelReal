@@ -77,8 +77,8 @@ const Form = () => {
       </section>
 
       {/* Columna derecha: contacto */}
-      <section className="col-12 col-md-5 d-flex align-items-stretch justify-content-center align-items-center">
-        <Footer />
+      <section className="col-12 col-md-5 d-flex align-items-stretch justify-content-center align-items-center responsive-contacto">
+          <Footer />
       </section>
   </section>
 </form>

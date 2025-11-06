@@ -8,7 +8,7 @@ const Contacto = () => {
   ];
 
   return (
-    <section className="d-flex flex-wrap justify-content-center mb-5">
+    <section className="d-flex flex-wrap justify-content-center mb-5 responsive-section">
       <div className="d-flex flex-column gap-3">
         {contactCards.map((card, index) => (
           <div

@@ -58,4 +58,12 @@ textarea:not(:placeholder-shown) {
   border-color: blueviolet;
 }
 
-
+@media (max-width: 768px) {
+  .content-input {
+    width: 100%;
+  } 
+    
+  .responsive-contacto {
+    display: none !important;
+  }
+}
