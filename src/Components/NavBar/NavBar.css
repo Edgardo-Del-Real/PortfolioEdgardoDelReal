@@ -1,3 +1,16 @@
+.sticly-navbar {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(8px);
+}
+.navbar{
+   backdrop-filter: blur(3px);
+   width: 100%;
+}
+.responsive-nav{
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.891) !important;
+}
+
 .links {
    position: relative;
    text-decoration: none;
@@ -9,7 +22,6 @@
    letter-spacing: 0.3em;
    font-size: 1.1em;
 }
-
    .links::after { 
       content: '';
       position: absolute;
@@ -18,9 +30,8 @@
       transform: translateX(-50%) scaleX(0);
       width: 0%;
       height: 2px;
-      /* background-color: blue; */
       background:  linear-gradient(90deg, rgb(173, 90, 250) 0%, rgb(57, 0, 97) 100%);
-      transition: width 0.5s ease;
+      transition: width 0.3s ease;
    }
 
 .links:hover::after {

@@ -31,13 +31,13 @@
   border-radius: 15px;
   background-color: #1f1f2e;
   color: #C4C3D0;
-  transition: 1s;
+  transition: 0.3s ease-in-out;
   padding: 1rem;
   cursor: pointer;
 }
 
 .custom-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .custom-card i {

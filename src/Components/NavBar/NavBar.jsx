@@ -4,7 +4,7 @@ import {Link} from 'react-scroll';
 const navBar = () =>{
     return(
       <>
-        <nav className=" container navbar p-2 mt-4 " >
+        <nav className=" sticky-top container navbar p-2 mt-4 " >
           
           <section className="d-flex 
             flex-grow-1 
@@ -15,8 +15,8 @@ const navBar = () =>{
                 borde 
                 rounded-5 
                 p-2 
-                bg-dark 
                 bg-opacity-50
+                bg-dark 
                 bg-black
                 responsive-nav">
                  

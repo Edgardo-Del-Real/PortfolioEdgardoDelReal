@@ -71,7 +71,7 @@ const Form = () => {
         />
         <button 
           type='submit' 
-          className='btn-cv fs-6'>
+          className='btn-sb fs-6'>
           SUBMIT
         </button>
       </section>
