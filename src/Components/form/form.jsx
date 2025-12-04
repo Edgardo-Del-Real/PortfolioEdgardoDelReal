@@ -71,14 +71,14 @@ const Form = () => {
         />
         <button 
           type='submit' 
-          className='btn-cv fs-6'>
+          className='btn-sb fs-6'>
           SUBMIT
         </button>
       </section>
 
       {/* Columna derecha: contacto */}
-      <section className="col-12 col-md-5 d-flex align-items-stretch justify-content-center align-items-center">
-        <Footer />
+      <section className="col-12 col-md-5 d-flex align-items-stretch justify-content-center align-items-center responsive-contacto">
+          <Footer />
       </section>
   </section>
 </form>

@@ -31,13 +31,13 @@
   border-radius: 15px;
   background-color: #1f1f2e;
   color: #C4C3D0;
-  transition: 1s;
+  transition: 0.3s ease-in-out;
   padding: 1rem;
   cursor: pointer;
 }
 
 .custom-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .custom-card i {
@@ -56,4 +56,31 @@
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .aboutme {
+    height: auto;
+    margin-top: -100px;
+  }
 
+  .img2_ {
+    display: none;
+  }
+
+  .textos {
+    gap: 30px;
+  }
+
+  .tarjetas-container {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .aboutme {
+    margin-top: -400px;
+  }
+
+  .custom-card {
+    width: 120px;
+    padding: 0.5rem;
+  }
+}

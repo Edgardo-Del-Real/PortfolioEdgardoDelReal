@@ -7,18 +7,11 @@ const Hero = () => {
     return (
     <section className="container position-relative hero">
   <div className="row align-items-center">
-    
-    {/* Columna izquierda: Texto, redes, botones */}
     <div className="col-md-6 d-flex flex-column align-items-start">
-      {/* Título recto */}
       <h1 className="display-4 fw-bold text-primary mb-3">
         Edgardo Del Real
       </h1>
-
-      {/* Subtítulo */}
       <h2 className="h4 text-secondary mb-4">Desarrollador Web Fullstack</h2>
-
-      {/* Redes sociales */}
       <section className="d-flex mb-4">
         <a href="https://www.instagram.com/edgardelreal1/" target="_blank" rel="noopener noreferrer">
           <i className="bi bi-instagram ins ps-3 fs-3 "></i>
@@ -31,7 +24,6 @@ const Hero = () => {
         </a>
       </section>
 
-      {/* Botones */}
       <div className="d-flex gap-3">
         <a href="#" className="btn-cv" download>
           Descargar CV
@@ -42,7 +34,6 @@ const Hero = () => {
       </div>
     </div>
 
-    {/* Columna derecha: Imagen */}
     <div className="col-md-6 text-center mt-4 mt-md-0">
       <img
         src={fotoMia}
