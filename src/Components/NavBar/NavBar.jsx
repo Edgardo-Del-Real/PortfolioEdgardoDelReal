@@ -88,7 +88,7 @@ const NavBar = () => {
                                 className='nav-link-custom'
                                 activeClass="active-link"
                                 onClick={closeMenu}>
-                                ABOUT ME
+                                SOBRE MI
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -101,7 +101,7 @@ const NavBar = () => {
                                 className='nav-link-custom'
                                 activeClass="active-link"
                                 onClick={closeMenu}>
-                                SKILLS
+                                HABILIDADES
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -114,7 +114,7 @@ const NavBar = () => {
                                 className='nav-link-custom'
                                 activeClass="active-link"
                                 onClick={closeMenu}>
-                                PROJECTS
+                                PROYECTOS
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -127,7 +127,7 @@ const NavBar = () => {
                                 className='nav-link-custom'
                                 activeClass="active-link"
                                 onClick={closeMenu}>
-                                CONTACT
+                                CONTACTO
                             </Link>
                         </li>
                     </ul>

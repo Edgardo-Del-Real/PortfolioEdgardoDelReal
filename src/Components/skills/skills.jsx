@@ -41,7 +41,7 @@ const Skills = () => {
                 <div className="row mb-5">
                     <div className="col-12 text-center">
                         <h6 className='text-secondary fw-bold tracking-widest'>TECNOLOGÍAS</h6>
-                        <h2 className='text-white fw-bold display-5'>Mi stack técnico</h2>
+                        <h2 className='text-white fw-bold display-5'>Mi stack</h2>
                     </div>
                 </div>
 

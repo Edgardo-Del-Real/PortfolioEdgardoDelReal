@@ -118,14 +118,14 @@ const Form = () => {
                   </div>
 
                   {/* Info de Contacto (Reutilizando tu componente Footer/Contacto) */}
-                  <div className="col-12 col-lg-5">
-                      <div className="h-100 d-flex flex-column justify-content-center">
-                          <Footer />
-                      </div>
-                  </div>
-              </div>
-          </div>
-       </section>
+                <div className="col-12 col-lg-5">
+                <div className="h-100 d-flex flex-column justify-content-center">
+                <Footer />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     );
 };
 

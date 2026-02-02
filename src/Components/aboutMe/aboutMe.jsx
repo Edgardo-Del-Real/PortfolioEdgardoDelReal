@@ -7,7 +7,7 @@ import { Element } from 'react-scroll';
 const AboutMe = () => {
     const infoCards = [
         { icon: 'bi bi-code-slash', title: 'Stack', text: 'Fullstack Developer' },
-        { icon: 'bi bi-lightbulb', title: 'Mentalidad', text: 'Autodidacta y curioso' },
+        { icon: 'bi bi-lightbulb', title: 'Mentalidad', text: 'Autodidacta y disciplinado' },
         { icon: 'bi bi-people', title: 'Trabajo en equipo', text: 'Buena comunicación' },
         { icon: 'bi bi-globe', title: 'Inglés', text: 'Nivel B1 (intermedio)' },
         { icon: 'bi bi-lightning', title: 'Actitud', text: 'Proactivo y adaptable' },
@@ -21,7 +21,7 @@ const AboutMe = () => {
                 {/* Título centrado */}
                 <div className="row mb-5">
                     <div className="col-12 text-center">
-                        <h6 className='text-secondary fw-bold tracking-widest'>ABOUT ME</h6>
+                        <h6 className='text-secondary fw-bold tracking-widest'>SOBRE MI</h6>
                     </div>
                 </div>
 
