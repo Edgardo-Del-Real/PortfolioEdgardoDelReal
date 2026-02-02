@@ -1,50 +1,73 @@
-.section-skills {
-    height: 100vh;      
-    padding: 50px 0;
-} 
-.carta {
-    width: 100%;
-    max-width: 500px;
-} 
-
-.cont-img {
-    gap: 10px;
+/* Contenedor principal */
+.skills-section {
+    min-height: 100vh;
+    padding: 100px 0;
+    position: relative;
 }
 
-.img-skills {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
+/* Tarjeta individual de Skill */
 .skill-card {
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-    width: 140px;
-    padding: 10px;
-    border-radius: 12px;
-    background-color: #1f1f2e;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    cursor: pointer;
+    background-color: rgba(31, 31, 46, 0.6); /* Fondo semi-transparente */
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    border-radius: 16px;
+    padding: 20px 10px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote suave */
+    height: 100%;
+    backdrop-filter: blur(5px);
 }
 
+/* Efecto Hover */
 .skill-card:hover {
-    transform: scale(1.07);
+    transform: translateY(-10px);
+    background-color: rgba(31, 31, 46, 0.9);
+    border-color: blueviolet;
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
 }
 
-.skill-card p {
-    margin: 5px 0 0;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: whitesmoke;
+/* Imagen del icono */
+.skill-icon {
+    width: 60px; /* Tamaño base estándar */
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
 }
 
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.5));
+}
+
+/* Nombre de la tecnología */
+.skill-name {
+    color: #C4C3D0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: color 0.3s;
+}
+
+.skill-card:hover .skill-name {
+    color: white;
+    opacity: 1;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .section-skills {
-        height: auto;
-        padding: 30px 0;
+    .skills-section {
+        padding: 60px 0;
     }
-    
+
+    .skill-card {
+        padding: 15px 5px; /* Menos padding en celular */
+    }
+
+    .skill-icon {
+        width: 45px; /* Iconos un poco más chicos en móvil */
+        height: 45px;
+    }
+
+    .skill-name {
+        font-size: 0.8rem; /* Texto más pequeño */
+    }
 }

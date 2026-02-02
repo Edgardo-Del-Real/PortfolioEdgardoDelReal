@@ -1,28 +1,32 @@
 import React from 'react';
+import './footer.css'; // Importamos los estilos nuevos
 
-const Contacto = () => {
+const Footer = () => {
   const contactCards = [
-    { icon: 'bi bi-person-circle', title: 'Name', text: 'Edgardo Del Real' },
-    { icon: 'bi bi-telephone', title: 'Phone', text: '+54 9 3447-491803' },
-    { icon: 'bi bi-envelope', title: 'Email', text: 'edgardodelreal@email.com' },
+    { icon: 'bi bi-person-circle', title: 'Nombre', text: 'Edgardo Del Real' },
+    { icon: 'bi bi-envelope-fill', title: 'Email', text: 'edgardodelreal@email.com' },
+    // Puedes agregar ubicación si quieres
+    // { icon: 'bi bi-geo-alt-fill', title: 'Ubicación', text: 'Argentina' },
   ];
 
   return (
-    <section className="d-flex flex-wrap justify-content-center mb-5 responsive-section">
-      <div className="d-flex flex-column gap-3">
-        {contactCards.map((card, index) => (
-          <div
-            key={index}
-            className="card text-center p-3 border-0 shadow-sm custom-card w-100"
-          >
-            <i className={`${card.icon} fs-3 mb-1`}></i>
-            <h6 className="fw-bold mb-1">{card.title}</h6>
-            <p className="mb-2 small">{card.text}</p>
+    <div className="contact-card-container">
+      {contactCards.map((card, index) => (
+        <div key={index} className="footer-card">
+          {/* Icono a la izquierda */}
+          <div className="footer-icon">
+            <i className={card.icon}></i>
           </div>
-        ))}
-      </div>
-    </section>
+          
+          {/* Texto a la derecha */}
+          <div className="d-flex flex-column">
+            <span className="footer-title">{card.title}</span>
+            <span className="footer-text">{card.text}</span>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
-export default Contacto;
+export default Footer;

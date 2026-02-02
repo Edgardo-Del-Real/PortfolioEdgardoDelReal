@@ -1,86 +1,68 @@
-.aboutme {
-  margin-top: 200px;
-  height: 100vh;
+/* Contenedor principal flexible */
+.about-section {
+    min-height: 100vh;
+    padding: 80px 0;
+    position: relative;
+    /* Aseguramos que no se superponga con nada */
+    z-index: 1; 
 }
 
-@keyframes glow-border {
-  from {
-    box-shadow: 0 0 15px #6A5ACD;
-  }
-  to {
-    box-shadow: 0 0 20px #6A5ACD, 0 0 20px #7b6ece;
-  }
+/* Estilo de la imagen (Solo visible en PC) */
+.about-img {
+    max-width: 100%;
+    border: 2px solid rgba(138, 43, 226, 0.2);
+    transition: transform 0.4s ease;
+    filter: brightness(0.9);
 }
 
-.img2 {
-  width: 400px;
-  border-radius: 20px 100px;
-  overflow: hidden;
-  animation: glow-border 3s infinite alternate;
+.about-img:hover {
+    transform: scale(1.02);
+    border-color: blueviolet;
+    filter: brightness(1);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
 }
 
-.textos {
-  gap: 60px;
-}
-
-
-
-/* Tarjetas informativas */
+/* TARJETAS */
 .custom-card {
-  width: 180px;
-  border-radius: 15px;
-  background-color: #1f1f2e;
-  color: #C4C3D0;
-  transition: 0.3s ease-in-out;
-  padding: 1rem;
-  cursor: pointer;
+    background-color: rgba(31, 31, 46, 0.7) !important; /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto vidrio */
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent !important;
 }
 
 .custom-card:hover {
-  transform: scale(1.07);
+    transform: translateY(-5px); /* Se levanta un poco */
+    background-color: rgba(31, 31, 46, 1) !important;
+    border-color: blueviolet !important;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
 }
 
-.custom-card i {
-  color: blueviolet;
+/* Iconos de las tarjetas */
+.card-icon {
+    color: blueviolet;
+    transition: color 0.3s ease;
 }
 
-.tarjetas-container {
-  max-width: 60%;
-}
-.titulo-con-icono {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 3px;
-  justify-content: center;
+.custom-card:hover .card-icon {
+    color: #a855f7; /* Un violeta más brillante al hacer hover */
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
 }
 
+/* Ajuste fino para móviles */
 @media (max-width: 768px) {
-  .aboutme {
-    height: auto;
-    margin-top: -100px;
-  }
-
-  .img2_ {
-    display: none;
-  }
-
-  .textos {
-    gap: 30px;
-  }
-
-  .tarjetas-container {
-    max-width: 100%;
-  }
-}
-@media (max-width: 480px) {
-  .aboutme {
-    margin-top: -400px;
-  }
-
-  .custom-card {
-    width: 120px;
-    padding: 0.5rem;
-  }
+    .about-section {
+        padding: 50px 0; /* Menos padding en móvil */
+    }
+    
+    .custom-card {
+        padding: 1rem !important; /* Tarjetas un poco más compactas */
+    }
+    
+    .custom-card h6 {
+        font-size: 0.9rem; /* Texto un poco más chico para que entre bien */
+    }
+    
+    .custom-card p {
+        font-size: 0.75rem;
+    }
 }

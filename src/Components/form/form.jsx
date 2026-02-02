@@ -8,13 +8,18 @@ const Form = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // <- esto es crucial
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
 
+        // Tus credenciales de EmailJS (asegúrate de que sean las correctas)
         const serviceID = 'service_i7ksekm';
         const templateID = 'template_dfmr0i9';
-        const publicKey = 'wlTpjz8T0lkaocfvv'; 
+        const publicKey = 'wlTpjz8T0lkaocfvv';
 
         const templateParams = {
             from_name: name,
@@ -24,64 +29,103 @@ const Form = () => {
 
         emailjs.send(serviceID, templateID, templateParams, publicKey)
             .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                alert("Mensaje enviado correctamente 🎉");
+                setSubmitStatus('success');
                 setName('');
                 setEmail('');
                 setMessage('');
             })
             .catch((err) => {
                 console.error('FAILED...', err);
-                alert("Error al enviar el mensaje 😞");
+                setSubmitStatus('error');
+            })
+            .finally(() => {
+                setIsSubmitting(false);
+                // Limpiar mensaje después de 5 segundos
+                setTimeout(() => setSubmitStatus(null), 5000);
             });
     };
 
     return (
-       <form onSubmit={handleSubmit} 
-  className='d-flex flex-column justify-content-center align-items-center p-4'>
+       <section className='contact-section d-flex align-items-center' id='contact-section'>
+          <div className="container">
+              <div className="row mb-5">
+                  <div className="col-12 text-center">
+                      <h6 className='text-secondary fw-bold tracking-widest'>CONTACTO</h6>
+                      <h2 className='text-white fw-bold display-5'>Escríbeme</h2>
+                  </div>
+              </div>
 
-  <h6 className='titulo-con-icono text-secondary fw-bold mb-4'>
-    LET'S KEEP IN TOUCH
-  </h6>
+              <div className="row justify-content-center align-items-stretch g-5">
+                  {/* Formulario */}
+                  <div className="col-12 col-lg-6">
+                      <form onSubmit={handleSubmit} className="contact-form p-4 h-100 d-flex flex-column justify-content-center">
+                          <div className="mb-3">
+                              <input
+                                  type="text"
+                                  className="form-control custom-input"
+                                  value={name}
+                                  placeholder='Nombre Completo'
+                                  onChange={(e) => setName(e.target.value)}
+                                  required
+                                  disabled={isSubmitting}
+                              />
+                          </div>
+                          <div className="mb-3">
+                              <input
+                                  type="email"
+                                  className="form-control custom-input"
+                                  placeholder='Email'
+                                  value={email}
+                                  onChange={(e) => setEmail(e.target.value)}
+                                  required
+                                  disabled={isSubmitting}
+                              />
+                          </div>
+                          <div className="mb-3">
+                              <textarea
+                                  className="form-control custom-input"
+                                  placeholder='Tu Mensaje'
+                                  value={message}
+                                  onChange={(e) => setMessage(e.target.value)}
+                                  rows="5"
+                                  required
+                                  disabled={isSubmitting}
+                              ></textarea>
+                          </div>
 
-  <section 
-    className='container d-flex justify-content-center align-items-stretch p-3'>
-      
-      {/* Columna izquierda: formulario */}
-      <section className='col-12 col-md-6 d-flex flex-column content-input justify-content-center align-items-center'>
-        <input 
-          type="text"  
-          value={name} 
-          placeholder='YOUR FULL NAME' 
-          onChange={(e) => setName(e.target.value)} 
-          required
-        />
-        <input 
-          type="email"  
-          placeholder='YOUR EMAIL' 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <textarea   
-          placeholder='YOUR MESSAGE' 
-          value={message}
-          onChange={(e) => setMessage(e.target.value)} 
-          required
-        />
-        <button 
-          type='submit' 
-          className='btn-sb fs-6'>
-          SUBMIT
-        </button>
-      </section>
+                          <button type='submit' className='btn-submit w-100' disabled={isSubmitting}>
+                              {isSubmitting ? (
+                                  <span><span className="spinner-border spinner-border-sm me-2"></span>Enviando...</span>
+                              ) : (
+                                  'ENVIAR MENSAJE'
+                              )}
+                          </button>
 
-      {/* Columna derecha: contacto */}
-      <section className="col-12 col-md-5 d-flex align-items-stretch justify-content-center align-items-center responsive-contacto">
-          <Footer />
-      </section>
-  </section>
-</form>
+                          {/* Mensajes de Feedback */}
+                          {submitStatus === 'success' && (
+                              <div className="alert alert-success mt-3 text-center border-0 bg-success bg-opacity-25 text-success animate-fade-in">
+                                  <i className="bi bi-check-circle-fill me-2"></i>
+                                  ¡Mensaje enviado con éxito! 🎉
+                              </div>
+                          )}
+                          {submitStatus === 'error' && (
+                              <div className="alert alert-danger mt-3 text-center border-0 bg-danger bg-opacity-25 text-danger animate-fade-in">
+                                  <i className="bi bi-exclamation-triangle-fill me-2"></i>
+                                  Hubo un error. Intenta nuevamente.
+                              </div>
+                          )}
+                      </form>
+                  </div>
+
+                  {/* Info de Contacto (Reutilizando tu componente Footer/Contacto) */}
+                  <div className="col-12 col-lg-5">
+                      <div className="h-100 d-flex flex-column justify-content-center">
+                          <Footer />
+                      </div>
+                  </div>
+              </div>
+          </div>
+       </section>
     );
 };
 

@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -13,76 +14,127 @@ const NavBar = () => {
         setIsOpen(false);
     };
 
-    // Efecto para cerrar el menú si se agranda la pantalla (opcional, buena práctica)
+    // Efecto para detectar scroll y cambiar el estilo del navbar
     useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
         const handleResize = () => {
             if (window.innerWidth > 991) {
                 setIsOpen(false);
             }
         };
+
+        window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     return (
-        <nav className="sticky-top container navbar p-2 mt-4">
-            {/* CAMBIO AQUÍ: 
-                'justify-content-end': Alinea el botón a la derecha en móviles.
-                'justify-content-md-center': Mantiene el menú centrado en escritorio (md+).
-            */}
-            <section className="d-flex flex-grow-1 justify-content-end justify-content-md-center position-relative align-items-center">
+        /* La clase 'scrolled' se activa al bajar 50px, 
+           cambiando el fondo de transparente a oscuro borroso 
+        */
+        <nav className={`navbar-custom fixed-top ${scrolled ? 'scrolled' : ''}`}>
+            <div className="container d-flex justify-content-between justify-content-lg-center align-items-center py-2">
                 
-                {/* Botón Hamburguesa */}
-                <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                {/* Opcional: Si quisieras un logo a la izquierda en el futuro
+                   <div className="navbar-brand d-lg-none text-white fw-bold">EDR</div> 
+                */}
+
+                {/* Botón Hamburguesa (Visible solo en móvil) */}
+                {/* 'ms-auto' lo empuja a la derecha si no hay logo */}
+                <div 
+                    className={`hamburger ms-auto d-lg-none ${isOpen ? 'open' : ''}`} 
+                    onClick={toggleMenu}
+                    aria-label="Toggle navigation"
+                >
                     <span className="bar"></span>
                     <span className="bar"></span>
                     <span className="bar"></span>
                 </div>
 
-                {/* Menú de Navegación */}
-                <ul className={`d-flex list-unstyled m-0 borde rounded-5 p-2 bg-opacity-50 bg-dark bg-black responsive-nav ${isOpen ? 'active' : ''}`}>
-                    <li className="py-2 px-md-5 px-4">
-                        <Link 
-                            to="hero" 
-                            spy={true} 
-                            smooth={true} 
-                            duration={500} 
-                            className='links'
-                            onClick={closeMenu}>
-                        HOME</Link>
-                    </li>
-                    <li className="py-2 px-md-5 px-4">
-                        <Link 
-                            to="about-me" 
-                            spy={true} 
-                            smooth={true} 
-                            duration={500} 
-                            className='links'
-                            onClick={closeMenu}>
-                        ABOUT ME</Link>
-                    </li>
-                    <li className="py-2 px-md-5 px-4">
-                        <Link 
-                            to="skills" 
-                            spy={true} 
-                            smooth={true} 
-                            duration={500} 
-                            className='links'
-                            onClick={closeMenu}
-                        >SKILLS</Link>
-                    </li>
-                    <li className="py-2 px-md-5 px-4">
-                        <Link 
-                            to="projects" 
-                            spy={true} 
-                            smooth={true} 
-                            duration={500}  
-                            className='links'
-                            onClick={closeMenu}>
-                        PROJECTS</Link>
-                    </li>
-                </ul>
-            </section>
+                {/* Menú de Enlaces */}
+                <div className={`nav-menu-container ${isOpen ? 'active' : ''}`}>
+                    <ul className="nav-list d-flex list-unstyled m-0 gap-4">
+                        <li className="nav-item">
+                            <Link 
+                                to="hero" 
+                                spy={true} 
+                                smooth={true} 
+                                offset={-80} // Compensa la altura del navbar
+                                duration={500} 
+                                className='nav-link-custom'
+                                activeClass="active-link"
+                                onClick={closeMenu}>
+                                HOME
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link 
+                                to="about-me" 
+                                spy={true} 
+                                smooth={true} 
+                                offset={-80}
+                                duration={500} 
+                                className='nav-link-custom'
+                                activeClass="active-link"
+                                onClick={closeMenu}>
+                                ABOUT ME
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link 
+                                to="skills" 
+                                spy={true} 
+                                smooth={true} 
+                                offset={-80}
+                                duration={500} 
+                                className='nav-link-custom'
+                                activeClass="active-link"
+                                onClick={closeMenu}>
+                                SKILLS
+                            </Link>
+                        </li>
+                        {/* Puedes descomentar esto cuando agregues la sección Proyectos
+                        <li className="nav-item">
+                            <Link 
+                                to="projects" 
+                                spy={true} 
+                                smooth={true} 
+                                offset={-80}
+                                duration={500}  
+                                className='nav-link-custom'
+                                activeClass="active-link"
+                                onClick={closeMenu}>
+                                PROJECTS
+                            </Link>
+                        </li> 
+                        */}
+                         <li className="nav-item">
+                            <Link 
+                                to="contact-section" 
+                                spy={true} 
+                                smooth={true} 
+                                offset={-80}
+                                duration={500}  
+                                className='nav-link-custom'
+                                activeClass="active-link"
+                                onClick={closeMenu}>
+                                CONTACT
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     );
 }
