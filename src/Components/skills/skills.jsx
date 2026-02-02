@@ -12,19 +12,27 @@ import mongo from '../../assets/mongo.svg';
 import mysql from '../../assets/mysql.svg';
 import maria from '../../assets/maria.svg';
 import boot from '../../assets/boot.svg';
+import tailwind from '../../assets/tailwind.svg';
+import csharp from '../../assets/csharp.svg';
+import NET from '../../assets/net.svg';
+import angular from '../../assets/angular.svg';
 
 const Skills = () => {
     const skills = [
         { img: html, name: 'HTML5' },
         { img: css, name: 'CSS3' },
         { img: js, name: 'JavaScript' },
+        { img: boot, name: 'Bootstrap' },
+        { img: tailwind, name: 'Tailwind CSS' },
+        { img: node, name: 'Node.js' },
         { img: react, name: 'React' },
         { img: vite, name: 'Vite' },
-        { img: node, name: 'Node.js' },
-        { img: mongo, name: 'MongoDB' },
+        { img: NET, name: '.NET' },
+        { img: angular, name: 'Angular' },
+        { img: csharp, name: 'C#' },
         { img: mysql, name: 'MySQL' },
+        { img: mongo, name: 'MongoDB' },
         { img: maria, name: 'MariaDB' },
-        { img: boot, name: 'Bootstrap' },
     ];
 
     return (
@@ -33,17 +41,12 @@ const Skills = () => {
                 <div className="row mb-5">
                     <div className="col-12 text-center">
                         <h6 className='text-secondary fw-bold tracking-widest'>TECNOLOGÍAS</h6>
-                        <h2 className='text-white fw-bold display-5'>Mi Stack Técnico</h2>
+                        <h2 className='text-white fw-bold display-5'>Mi stack técnico</h2>
                     </div>
                 </div>
 
                 <div className="row g-4 justify-content-center">
                     {skills.map((skill, index) => (
-                        /* Configuración de la grilla (Responsive 10/10):
-                           - col-4: 3 iconos por fila en celular (se ven bien grandes)
-                           - col-sm-3: 4 iconos por fila en celulares grandes
-                           - col-md-2: 6 iconos por fila en tablet/PC
-                        */
                         <div key={index} className="col-4 col-sm-3 col-lg-2">
                             <div className="skill-card d-flex flex-column align-items-center justify-content-center">
                                 <LazyLoadImage
