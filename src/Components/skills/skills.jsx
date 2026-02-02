@@ -14,7 +14,7 @@ import maria from '../../assets/maria.svg';
 import boot from '../../assets/boot.svg';
 import tailwind from '../../assets/tailwind.svg';
 import csharp from '../../assets/csharp.svg';
-import NET from '../../assets/net.svg';
+import NET from '../../assets/NET.svg';
 import angular from '../../assets/angular.svg';
 
 const Skills = () => {
