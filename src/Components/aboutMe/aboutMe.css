@@ -7,19 +7,50 @@
     z-index: 1; 
 }
 
-/* Estilo de la imagen (Solo visible en PC) */
-.about-img {
-    max-width: 100%;
-    border: 2px solid rgba(138, 43, 226, 0.2);
-    transition: transform 0.4s ease;
-    filter: brightness(0.9);
+.image-wrapper {
+    position: relative;
+    z-index: 1; /* Asegura que la imagen esté por encima del brillo */
+    padding: 10px; /* Espacio para que se vea el brillo */
+    border-radius: 24px;
+    transition: all 0.5s ease;
 }
-
-.about-img:hover {
-    transform: scale(1.02);
-    border-color: blueviolet;
-    filter: brightness(1);
-    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Detrás de la imagen */
+    /* Gradiente diagonal con tus colores */
+    background: linear-gradient(135deg, blueviolet, #2a0572, #8a2be2);
+    border-radius: 24px;
+    /* Mucho desenfoque para que parezca luz */
+    filter: blur(20px);
+    opacity: 0.3; /* Brillo sutil por defecto */
+    transition: all 0.5s ease;
+}
+.about-img {
+    max-width: 95%;
+    border-radius: 20px; /* Un poco menos que el wrapper para que encaje */
+    /* Borde sutil que combina con el fondo */
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    /* Filtro inicial: un poco más oscura y con más contraste para ambiente "dark" */
+    filter: brightness(0.9) contrast(1.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra profunda */
+}
+.image-wrapper:hover::before {
+    opacity: 0.8; /* El resplandor se vuelve intenso */
+    filter: blur(25px); /* Se expande la luz */
+    transform: scale(1.05); /* Crece un poco el fondo luminoso */
+}
+.image-wrapper:hover .about-img {
+    /* La imagen se levanta y se inclina sutilmente */
+    transform: translateY(-10px) scale(1.02) rotate(1deg);
+    border-color: #d946ef; /* El borde se vuelve de un violeta más brillante */
+    filter: brightness(1.1) contrast(1); /* La imagen se ilumina completamente */
+    box-shadow: 0 20px 50px rgba(138, 43, 226, 0.4); /* Sombra de luz */
 }
 
 /* TARJETAS */

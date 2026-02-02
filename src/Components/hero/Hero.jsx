@@ -8,11 +8,6 @@ const Hero = () => {
         <section className="hero-section d-flex align-items-center" id="hero">
             <div className="container">
                 <div className="row align-items-center">
-                    
-                    {/* Columna de TEXTO:
-                       - Móvil: order-2 (Va SEGUNDO, debajo de la foto)
-                       - PC (md): order-md-1 (Va PRIMERO, a la izquierda)
-                    */}
                     <div className="col-12 col-md-6 order-2 order-md-1 d-flex flex-column align-items-center align-items-md-start text-center text-md-start">
                         <h1 className="display-4 fw-bold text-white mb-2">
                             Edgardo Del Real
@@ -34,7 +29,7 @@ const Hero = () => {
                         </div>
 
                         <div className="d-flex gap-3">
-                            <a href="#" className="btn-cv" download>
+                            <a href="https://drive.google.com/file/d/1FDVL_qXcswt7VR9sp6Bph409AHnUg3yS/view?usp=sharing" target='_blank' className="btn-cv" download>
                                 Descargar CV
                             </a>
                             <Link 

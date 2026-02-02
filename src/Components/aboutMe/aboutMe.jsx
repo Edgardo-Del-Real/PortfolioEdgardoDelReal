@@ -26,13 +26,9 @@ const AboutMe = () => {
                 </div>
 
                 <div className="row align-items-center justify-content-center">
-                    {/* Columna IMAGEN:
-                       - d-none: Oculta por defecto (móvil/tablet)
-                       - d-lg-block: Visible solo en pantallas grandes (PC)
-                    */}
                     <div className="col-lg-5 d-none d-lg-block text-center mb-4 mb-lg-0">
                         <div className="image-wrapper">
-                             <img src={foto2} alt="Setup" className='img-fluid rounded-4 shadow-lg about-img' />
+                            <img src={foto2} alt="Setup" className='img-fluid rounded-4 shadow-lg about-img' />
                         </div>
                     </div>
 
