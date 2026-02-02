@@ -1,50 +1,42 @@
-/* 1. Normalización básica para evitar scroll horizontal fantasma */
+/* Copia y reemplaza todo en src/index.css */
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* Esto es CLAVE para que no se rompa en celulares */
-  scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en los links */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* 2. Configuración del cuerpo y fondo animado */
 body {
-  /* Usamos min-height en lugar de height para que el fondo crezca con el contenido */
   min-height: 100vh;
-  
-  /* Tu paleta de colores original, mantenida */
+  /* Mismo gradiente, pero animación mucho más lenta (25s) para elegancia */
   background: linear-gradient(270deg, #000000, #0d0c29, #000000);
   background-size: 400% 400%;
-  animation: gradientAnimation 12s ease infinite;
+  animation: gradientAnimation 25s ease infinite; /* ANTES: 12s */
   
-  /* Fuente y color base */
   color: whitesmoke;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Fuente moderna y segura */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* 3. Animación del fondo */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* 4. Scrollbar personalizada (El toque "Pro") */
-/* Esto hace que la barra lateral combine con tu diseño violeta */
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #0d0c29; /* Fondo oscuro para el carril */
+  background: #0d0c29;
 }
-
 ::-webkit-scrollbar-thumb {
   background: blueviolet;
   border-radius: 5px;
-  border: 2px solid #0d0c29; /* Borde para dar efecto flotante */
+  border: 2px solid #0d0c29;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a2be2; /* Un poco más claro al pasar el mouse */
+  background: #8a2be2;
 }

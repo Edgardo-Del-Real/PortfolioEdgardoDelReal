@@ -8,7 +8,7 @@ import Hero from './Components/hero/Hero'
 import AboutMe from './Components/aboutMe/aboutMe'
 import Skills from './Components/skills/skills'
 import Form from './Components/form/form'
-import Footer from './Components/footer/footer'
+import Projects from './Components/projects/projects'
 
 
 
@@ -16,9 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <NavBar  />
     <Hero />
-    <AboutMe /> 
+    <AboutMe />
+    <Projects /> 
     <Skills />
     <Form />
-    {/* <Footer /> */}
   </React.StrictMode>,
 )

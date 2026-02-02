@@ -1,17 +1,20 @@
-/* Contenedor principal */
+/* Copia y reemplaza todo en src/Components/hero/Hero.css */
+
 .hero-section {
     min-height: 100vh;
     padding-top: 80px;
     padding-bottom: 50px;
 }
 
-/* Animación de borde */
+/* Animación sutil "respirando" (menos agresiva que antes) */
 @keyframes glow-border {
     from {
-        box-shadow: 0 0 15px blueviolet;
+        box-shadow: 0 0 5px rgba(138, 43, 226, 0.3);
+        border-color: rgba(138, 43, 226, 0.4);
     }
     to {
-        box-shadow: 0 0 30px blueviolet, 0 0 50px rgb(137, 24, 243);
+        box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+        border-color: rgba(138, 43, 226, 0.8);
     }
 }
 
@@ -22,12 +25,16 @@
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid rgba(138, 43, 226, 0.3);
-    animation: glow-border 3s infinite alternate;
-    transition: transform 0.3s ease;
+    /* Animación lenta y suave por defecto */
+    animation: glow-border 4s infinite alternate ease-in-out;
+    transition: all 0.4s ease;
 }
 
+/* Al hacer Hover, el brillo se intensifica (feedback de usuario) */
 .hero-img:hover {
     transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.8), 0 0 60px rgba(217, 70, 239, 0.4);
+    border-color: #d946ef; /* Magenta al hover */
 }
 
 /* Redes Sociales */
@@ -36,14 +43,11 @@
     color: #C4C3D0;
     transition: all 0.3s ease;
 }
-
 .social-icons i:hover {
     transform: translateY(-3px);
+    color: white; /* Más limpio */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
-
-.social-icons .bi-instagram:hover { color: #E1306C; text-shadow: 0 0 15px #E1306C; }
-.social-icons .bi-linkedin:hover { color: #0A66C2; text-shadow: 0 0 15px #0A66C2; }
-.social-icons .bi-github:hover { color: #ffffff; text-shadow: 0 0 15px #ffffff; }
 
 /* Botones */
 .btn-cv {
@@ -56,41 +60,41 @@
     transition: 0.3s ease;
     border: 1px solid blueviolet;
 }
-
 .btn-cv:hover {
     background-color: #7b2cbf;
-    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
     transform: translateY(-2px);
 }
 
+/* NUEVO: Botón de Contacto con color CYAN para contraste profesional */
 .btn-contact {
     background-color: transparent;
-    color: #C4C3D0;
+    color: #00f2ff; /* Color Cyan para destacar sobre el violeta */
     text-decoration: none;
     padding: 12px 25px;
     border-radius: 8px;
-    border: 1px solid #C4C3D0;
+    border: 1px solid rgba(0, 242, 255, 0.3);
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .btn-contact:hover {
-    border-color: blueviolet;
-    color: blueviolet;
-    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+    border-color: #00f2ff;
+    background-color: rgba(0, 242, 255, 0.05);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+    color: #00f2ff;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
 }
 
-/* --- RESPONSIVE AJUSTADO --- */
+/* Responsive */
 @media (max-width: 768px) {
     .hero-img {
-        width: 180px; /* Un poco más pequeña en móvil para que no ocupe todo */
+        width: 180px;
         height: 180px;
-        /* Quitamos margin-top y ponemos margin-bottom porque ahora la foto va primero */
         margin-top: 0; 
         margin-bottom: 1.5rem; 
     }
-    
     .display-4 {
         font-size: 2.5rem;
     }

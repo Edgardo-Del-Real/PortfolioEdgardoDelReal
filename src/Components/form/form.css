@@ -1,24 +1,25 @@
-/* Contenedor principal */
+/* Copia y reemplaza todo en src/Components/form/form.css */
+
 .contact-section {
     min-height: 100vh;
     padding: 100px 0;
     position: relative;
 }
 
-/* Estilo del formulario contenedor */
 .contact-form {
-    background-color: rgba(31, 31, 46, 0.4);
+    background-color: rgba(20, 20, 25, 0.6); /* Un poco más oscuro */
     border-radius: 20px;
     border: 1px solid rgba(138, 43, 226, 0.1);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Inputs y Textarea */
+/* Inputs */
 .custom-input {
-    background-color: rgba(20, 20, 20, 0.8) !important;
-    border: 2px solid #2a2a35 !important;
-    color: #e0e0e0 !important;
+    /* Fondo muy oscuro para que resalte la letra */
+    background-color: rgba(10, 10, 15, 0.9) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important; /* Blanco puro para legibilidad */
     border-radius: 12px !important;
     padding: 15px 20px !important;
     font-size: 1rem;
@@ -26,19 +27,19 @@
 }
 
 .custom-input::placeholder {
-    color: #6c757d;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .custom-input:focus {
-    background-color: rgba(20, 20, 20, 1) !important;
+    background-color: #000000 !important;
     border-color: blueviolet !important;
-    box-shadow: 0 0 15px rgba(138, 43, 226, 0.2) !important;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.1) !important; /* Ring sutil */
     outline: none !important;
 }
 
 /* Botón de envío */
 .btn-submit {
-    background-color: blueviolet;
+    background: linear-gradient(45deg, blueviolet, #7b2cbf);
     color: white;
     border: none;
     padding: 15px;
@@ -47,37 +48,32 @@
     letter-spacing: 1px;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
 }
 
 .btn-submit:hover:not(:disabled) {
-    background-color: #7b2cbf;
+    background: linear-gradient(45deg, #7b2cbf, blueviolet);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
 }
 
 .btn-submit:disabled {
-    background-color: #4a4a5e;
+    background: #4a4a5e;
     cursor: not-allowed;
     opacity: 0.7;
+    box-shadow: none;
 }
 
-/* Animación simple para el mensaje */
+/* Animaciones y Responsive */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-fade-in {
     animation: fadeIn 0.5s ease forwards;
 }
 
-/* Ajustes Responsive */
 @media (max-width: 992px) {
-    .contact-section {
-        padding: 60px 0;
-    }
-    
-    .contact-form {
-        padding: 20px !important;
-    }
+    .contact-section { padding: 60px 0; }
+    .contact-form { padding: 20px !important; }
 }

@@ -104,10 +104,9 @@ const NavBar = () => {
                                 SKILLS
                             </Link>
                         </li>
-                        {/* Puedes descomentar esto cuando agregues la sección Proyectos
                         <li className="nav-item">
                             <Link 
-                                to="projects" 
+                                to="projects" /* Esto debe coincidir con el id="projects" de la sección */
                                 spy={true} 
                                 smooth={true} 
                                 offset={-80}
@@ -117,9 +116,8 @@ const NavBar = () => {
                                 onClick={closeMenu}>
                                 PROJECTS
                             </Link>
-                        </li> 
-                        */}
-                         <li className="nav-item">
+                        </li>
+                        <li className="nav-item">
                             <Link 
                                 to="contact-section" 
                                 spy={true} 
