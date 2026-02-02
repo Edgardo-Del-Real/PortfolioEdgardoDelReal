@@ -1,54 +1,57 @@
-.sticly-navbar {
-  background: rgba(0, 0, 0, 0.8) !important;
-  backdrop-filter: blur(8px);
-}
-.navbar{
+.navbar {
    backdrop-filter: blur(3px);
    width: 100%;
+   z-index: 1000;
 }
-.responsive-nav{
-      backdrop-filter: blur(5px);
-      background-color: rgba(0, 0, 0, 0.891) !important;
+
+/* Transición suave para el menú */
+.responsive-nav {
+   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+   transform-origin: top right;
 }
 
 .links {
    position: relative;
    text-decoration: none;
-   transition: color 0.5s;
    color: white;
-   transition: .5s;
-   font-family:Arial, Helvetica, sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
    cursor: pointer;
    letter-spacing: 0.3em;
    font-size: 1.1em;
+   display: block; /* Asegura que ocupe espacio para clic */
 }
-   .links::after { 
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) scaleX(0);
-      width: 0%;
-      height: 2px;
-      background:  linear-gradient(90deg, rgb(173, 90, 250) 0%, rgb(57, 0, 97) 100%);
-      transition: width 0.3s ease;
-   }
+
+.links::after { 
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%) scaleX(0);
+   width: 0%;
+   height: 2px;
+   background: linear-gradient(90deg, rgb(173, 90, 250) 0%, rgb(57, 0, 97) 100%);
+   transition: width 0.3s ease;
+}
 
 .links:hover::after {
    width: 100%;
    transform: translateX(-50%) scaleX(1);
 }
-.borde{
-    border: 2px blueviolet solid; 
+
+.borde {
+   border: 2px blueviolet solid; 
 }
+
+/* Estilos de la Hamburguesa */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;
-  height: 22px;
+  width: 30px;
+  height: 21px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1100;
+  margin-right: 10px; /* Separación del borde derecho */
 }
 
 .bar {
@@ -59,19 +62,69 @@
   transition: all 0.3s ease;
 }
 
- @media (max-width: 991px){  
-   .links {
-    font-size: 0.7em;
-    letter-spacing: 0.2em;
-  }
+/* Animación Hamburguesa a X */
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
-@media (max-width: 480px) {
-.responsive-nav {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-   background-color: rgba(0, 0, 0, 0.9);
-} 
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
+/* --- ESTILOS RESPONSIVE (MÓVIL) --- */
+@media (max-width: 991px) {
+  .hamburger {
+    display: flex; 
+  }
+
+  /* Menú desplegable compacto */
+  .responsive-nav {
+    display: block; /* Oculto visualmente con opacidad/escala */
+    position: absolute;
+    top: 50px; /* Justo debajo del navbar */
+    right: 0;
+    
+    /* Dimensiones compactas */
+    width: 220px; 
+    height: auto;
+    
+    /* Estilo visual de tarjeta */
+    background-color: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid blueviolet !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    /* Estado inicial: Oculto */
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+    pointer-events: none; /* Evita clics cuando está cerrado */
+  }
+
+  /* Estado Activo: Visible */
+  .responsive-nav.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: all;
+  }
+
+  /* Ajuste de enlaces en móvil */
+  .links {
+    font-size: 0.9em;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+  
+  /* Centrar los items de la lista en móvil */
+  .responsive-nav li {
+    width: 100%;
+    text-align: center;
+  }
+}
