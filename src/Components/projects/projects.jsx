@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import tr from '../../assets/TR.png';
 import pelican from '../../assets/pelican.png';
 import gintoneria from '../../assets/gintoneria.png';
+import rauda from '../../assets/rauda.png';
 
 const Projects = () => {
     // Array de datos: Agrega aquí tus proyectos reales
@@ -32,6 +33,14 @@ const Projects = () => {
             img: gintoneria,
             demoLink: "https://menu-la-gintoneria.vercel.app/",
             repoLink: "https://github.com/Edgardo-Del-Real/LaGintoneriaMenu"
+        },
+        {
+            title: "Rauda Boutique",
+            description: "Sitio web para venta de vinos y productos regionales.",
+            techs: ["JavaScript", "Google sheets", "Tailwind CSS", "Vercel"],
+            img: rauda,
+            demoLink: "https://rauda.vercel.app/",
+            repoLink: "https://github.com/Edgardo-Del-Real/RaudaBoutique"
         }
     ];
 
