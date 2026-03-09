@@ -1,5 +1,3 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
@@ -9,6 +7,7 @@ import AboutMe from './Components/aboutMe/aboutMe'
 import Skills from './Components/skills/skills'
 import Form from './Components/form/form'
 import Projects from './Components/projects/projects'
+import { Analytics } from '@vercel/analytics/react'
 
 
 
@@ -20,5 +19,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Skills />
     <Projects /> 
     <Form />
+    <Analytics />
   </React.StrictMode>,
 )
