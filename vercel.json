@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "portfolioedgardodelreal.pages.dev/$1",
+      "destination": "https://portfolioedgardodelreal.pages.dev/$1",
       "permanent": true
     }
 ]
